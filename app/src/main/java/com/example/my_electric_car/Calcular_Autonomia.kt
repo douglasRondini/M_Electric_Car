@@ -1,35 +1,29 @@
 package com.example.my_electric_car
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.my_electric_car.databinding.ActivityCalcularAutonomiaBinding
-import com.example.my_electric_car.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-
+class Calcular_Autonomia : AppCompatActivity() {
+    private lateinit var binding: ActivityCalcularAutonomiaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCalcularAutonomiaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        calcularAutonomia()
-
+        close()
     }
-
-    private fun calcularAutonomia() {
-        binding.btnCalcularAutonomia.setOnClickListener{
-            startActivity(Intent(this, Calcular_Autonomia()::class.java))
+    private fun close() {
+        binding.imgClose.setOnClickListener {
+            finish()
         }
     }
 }

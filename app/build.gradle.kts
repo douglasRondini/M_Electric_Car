@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.my_electric_car"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.my_electric_car"
@@ -32,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    viewBinding {
+        enable = true
     }
 }
 
