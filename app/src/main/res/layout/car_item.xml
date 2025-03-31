@@ -7,12 +7,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/crView_car"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:cardBackgroundColor="@color/gray"
         app:cardCornerRadius="24dp"
-        app:cardElevation="24dp"
+        app:cardElevation="2dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" >
@@ -34,7 +34,7 @@
 
             <TextView
                 android:id="@+id/txt_preço"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Preço"
@@ -43,7 +43,7 @@
 
             <TextView
                 android:id="@+id/txt_bateria"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Bateria"
@@ -52,7 +52,7 @@
 
             <TextView
                 android:id="@+id/txt_potencia"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Potencia"
@@ -61,7 +61,7 @@
 
             <TextView
                 android:id="@+id/txt_recarga"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Recarga"
@@ -74,9 +74,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="180dp"
                 android:text="R$: 4300.00"
-                app:layout_constraintStart_toEndOf="@id/txt_preço"
-                android:layout_marginStart="50dp"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_preço"
                 app:layout_constraintTop_toBottomOf="@id/img_car" />
 
             <TextView
@@ -85,8 +85,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="180dp"
                 android:text="93,4 kWh"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txt_valor_preço"
+                app:layout_constraintStart_toEndOf="@+id/txt_bateria"
                 app:layout_constraintTop_toBottomOf="@id/txt_valor_preço" />
 
             <TextView
@@ -95,8 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="180dp"
                 android:text="646 cv"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/txt_valor_bateria"
+                app:layout_constraintStart_toEndOf="@+id/txt_potencia"
                 app:layout_constraintTop_toBottomOf="@id/txt_valor_bateria" />
 
             <TextView
@@ -105,8 +107,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="180dp"
                 android:text="23 min"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/txt_valor_potencia"
+                app:layout_constraintStart_toEndOf="@+id/txt_recarga"
                 app:layout_constraintTop_toBottomOf="@id/txt_valor_potencia" />
 
 

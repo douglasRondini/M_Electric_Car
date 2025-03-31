@@ -8,6 +8,39 @@
     tools:context=".MainActivity">
 
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carros"
+
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favoritos"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     <TextView
         android:id="@+id/txt_title"
@@ -22,33 +55,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/txt_Car"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:text="Carros"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
-
-    <TextView
-        android:id="@+id/txt_favoritos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Favoritos"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_Car"
-        app:layout_constraintTop_toTopOf="@+id/txt_Car" />
 
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rcv_recyclerview"
        android:layout_width="match_parent"
        android:layout_height="620dp"
-       app:layout_constraintTop_toBottomOf="@+id/txt_Car"
+       tools:listitem="@layout/car_item"
+       android:visibility="invisible"
+       app:layout_constraintTop_toBottomOf="@+id/tab_layout"
        />
 
 
